@@ -1,0 +1,34 @@
+ALGORITHM Date
+VAR
+     date : INTEGER := 181019;
+     day,month,year : INTEGER;
+     monthS :STRING;
+BEGIN
+    year := date MOD 100;
+    day := date DIV 100;
+    month := (date DIV 100) MOD 100;
+
+    IF (day = 0 OR day>31 OR month = 0 OR month>12) THEN
+        Write("Error")
+    ELSE_IF (month = 2 AND year MOD 4 = 0 AND day >29) THEN
+        Write("Error")
+    ELSE_IF (month = 2 AND year MOD 4 <> 0 AND day >28) THEN
+        Write("Error")        
+    ELSE_IF ((month = 4 OR month =6 OR month =9 OR month = 11)AND day>30) THEN
+        Write("Error")
+    ELSE
+         SWITCH (month) DO
+            case 1 : monthS := "Janvier";
+                     
+
+
+            case 12 : monthS := "Decembre";                     
+            
+            default : Write("Error");
+         END_SWITCH
+
+         Write("Day:",day);
+         Write("Month:",monthS);
+         Write("Year:",2000+year);
+    END_IF
+END

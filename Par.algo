@@ -1,0 +1,25 @@
+ALGORITHM Par
+VAR
+    c : CHAR;
+    cmp : INTEGER := 0;
+BEGIN
+    REPEAT
+        Write("Donnez un char");
+        Read(c);
+
+        IF (c = "(") THEN
+            cmp := cmp + 1;
+        END_IF
+
+        IF (c = ")") THEN
+            cmp := cmp - 1;
+        END_IF
+
+    UNTIL (c = "#" OR cmp<0)
+
+    IF (cmp = 0) THEN
+        Write("Valid")
+    ELSE
+        Write("Invalid")
+    END_IF
+END

@@ -1,0 +1,39 @@
+ALGORITHM Test
+VAR
+    // a,b : INTEGER := 0;
+    a,b,sum : INTEGER;
+
+BEGIN
+   
+    Write("Donner le 1er num")
+    Read(a)
+    Write("Donner le 2em num")
+    Read(b)
+
+    sum := a+b
+
+    Write("La somme des deux nbr esr",sum)
+
+    IF (conditon) THEN
+        set_instructions
+    END_IF
+
+    IF (conditon) THEN
+        set_instructions
+    ELSE
+        set_instructions
+    END_IF
+
+    FOR i FROM 1 TO 5 STEP 1  DO
+        set_instructions
+    END_FOR
+
+    WHILE (condition) DO
+        set_instructions
+    END_WHILE
+
+    REPEAT
+        set_instructions
+    UNTIL (condition)
+
+END
